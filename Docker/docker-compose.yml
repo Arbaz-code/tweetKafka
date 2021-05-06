@@ -1,0 +1,10 @@
+version: "3"
+services:
+  ui:
+    image: tweetapp-ui
+    ports:
+      - "80:80"
+  api:
+    image: tweetapp-api
+    ports:
+      - "8090:8090"
