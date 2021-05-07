@@ -19,7 +19,18 @@ services:
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - ALLOW_PLAINTEXT_LISTENER=yes
     depends_on:
-      - zookeeper 
+      - zookeeper
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    network_mode: host
+    volumes:
+      - $HOME/mongo:/data/db
+    healthcheck:
+      test: "exit 0" 
   ui:
     image: tweetapp-ui
     ports:
