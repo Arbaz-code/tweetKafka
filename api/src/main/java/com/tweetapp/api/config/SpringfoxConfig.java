@@ -40,7 +40,7 @@ public class SpringfoxConfig {
 				.withCredentials(
 						new AWSStaticCredentialsProvider(
 								new BasicAWSCredentials(
-										"AKIAQA4JROTPMVPAAWIA","NvSG6YgH3NPQAc95cFv3U5AsANzhZprh+ZyGelKc"
+										"Key","pass"
 										)
 								)
 						)
